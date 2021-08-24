@@ -26,6 +26,7 @@ HINT: Manage your time in order to finish the structure and responsiveness befor
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <!-- IMPORT ALL THE BOOTSTRAP RELATED CSS & SCRIPTS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
     <style>
         /* EXERCISE 1
@@ -39,20 +40,30 @@ HINT: Manage your time in order to finish the structure and responsiveness befor
             - The album duration
             - etc
 
-            ...to make sure you give every album the same consistent appearance.
+            ./pic.jpgto make sure you give every album the same consistent appearance.
          */
 
          
     </style>
 </head>
 
-<div></div>
 <body>
     <!-- EXERCISE 2 
             Implement a navigation bar using the bootstrap component
             This navigation bar must link every section in your page.
         -->
 
+        <nav class=" navbar navbar-light bg-dark ">
+            <header class="d-flex justify-content-center py-3">
+              <ul class="nav nav-pills">
+                <li class="nav-item"><a href="#albums" class="nav-link active" aria-current="page">Albums</a></li>
+                <li class="nav-item"><a href="#reviews" class="nav-link">Reviews</a></li>
+                <li class="nav-item"><a href="#worst" class="nav-link">Worst Albums</a></li>
+                <li class="nav-item"><a href="#Footer" class="nav-link">Footer</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+              </ul>
+            </header>
+        </nav>
     <!-- EXERCISE 3
             Create a responsive section for your favourite albums.
             In this section you should have:
@@ -60,6 +71,68 @@ HINT: Manage your time in order to finish the structure and responsiveness befor
             - 3 albums per row when you are on a tablet (or a smaller viewport)
             - 2 albums per row when you are on a small screen
         -->
+        <br>
+
+    <div class="container " id="albums">
+        <div class="row ">
+
+            
+            <div class="card col-sm-6 col-md-4 col-xxl-3" >
+                <img src="./pic.jpg" class="card-img-top" alt="./pic.jpg">
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+              <div class="card col-sm-6 col-md-4 col-xxl-3" >
+                <img src="./pic.jpg" class="card-img-top" alt="./pic.jpg">
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+              <div class="card col-sm-6 col-md-4 col-xxl-3" >
+                <img src="./pic.jpg" class="card-img-top" alt="./pic.jpg">
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+              <div class="card col-sm-6 col-md-4 col-xxl-3" >
+                <img src="./pic.jpg" class="card-img-top" alt="./pic.jpg">
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+              
+        </div>
+        <div class="row ">
+
+            
+            <div class="card col-sm-6 col-md-4 col-xxl-3" >
+                <img src="./pic.jpg" class="card-img-top" alt="./pic.jpg">
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+              <div class="card col-sm-6 col-md-4 col-xxl-3" >
+                <img src="./pic.jpg" class="card-img-top" alt="./pic.jpg">
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+              <div class="card col-sm-6 col-md-4 col-xxl-3" >
+                <img src="./pic.jpg" class="card-img-top" alt="./pic.jpg">
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+              <div class="card col-sm-6 col-md-4 col-xxl-3" >
+                <img src="./pic.jpg" class="card-img-top" alt="./pic.jpg">
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+              
+        </div>
+    </div>
 
     <!-- EXERCISE 4
             Create a section for the album reviews.
@@ -70,13 +143,131 @@ HINT: Manage your time in order to finish the structure and responsiveness befor
             - Duration
             - Genre
             - Tracklist
-            - ... And whatever you think it's interesting about it!
+            - ./pic.jpg And whatever you think it's interesting about it!
         -->
+        <hr>
+        <br>    
+    <div class="container" id='reviews'>
+        <h1>Best Album by reviews</h1>
+        <div class="row">
+        <div class="card col-sm-6 col-md-4 col-xxl-3" >
+                <img src="./pic.jpg" class="card-img-top" alt="./pic.jpg">
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+        </div>
+        <div class="bg-white rounded shadow-sm col-sm-6 col-md-8 col-xxl-8 clearfix graph-star-rating">
+            <h5 class="mb-0 mb-4">Ratings and Reviews</h5>
+            <div class="graph-star-rating-header">
+                <div class="star-rating">
+                    <a href="#"><i class="icofont-ui-rating active"></i>
+                    </a> <a href="#"><i class="icofont-ui-rating active"></i></a>
+                    <a href="#"><i class="icofont-ui-rating active"></i></a>
+                    <a href="#"><i class="icofont-ui-rating active"></i></a>
+                    <a href="#"><i class="icofont-ui-rating"></i></a>
+                    <b class="text-black ml-2">334</b>
+                </div>
+                <p class="text-black mb-4 mt-2">Rated 3.5 out of 5</p>
+            </div>
+            <div class="graph-star-rating-body">
+                <div class="rating-list">
+                    <div class="rating-list-left text-black"> 5 Star</div>
+                    <div class="rating-list-center">
+                        <div class="progress">
+                            <div style="width: 56%" aria-valuemax="5" aria-valuemin="0" aria-valuenow="5" role="progressbar"
+                                class="progress-bar bg-primary">
+                                <span class="sr-only">80% Complete (danger)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rating-list-right text-black">56%</div>
+                </div>
+                <div class="rating-list">
+                    <div class="rating-list-left text-black"> 4 Star</div>
+                    <div class="rating-list-center">
+                        <div class="progress">
+                            <div style="width: 23%" aria-valuemax="5" aria-valuemin="0" aria-valuenow="5" role="progressbar"
+                                class="progress-bar bg-primary">
+                                <span class="sr-only">80% Complete (danger)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rating-list-right text-black">23%</div>
+                </div>
+                <div class="rating-list">
+                    <div class="rating-list-left text-black"> 3 Star</div>
+                    <div class="rating-list-center">
+                        <div class="progress">
+                            <div style="width: 11%" aria-valuemax="5" aria-valuemin="0" aria-valuenow="5" role="progressbar"
+                                class="progress-bar bg-primary">
+                                <span class="sr-only">80% Complete (danger)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rating-list-right text-black">11%</div>
+                </div>
+                <div class="rating-list">
+                    <div class="rating-list-left text-black"> 2 Star</div>
+                    <div class="rating-list-center">
+                        <div class="progress">
+                            <div style="width: 2%" aria-valuemax="5" aria-valuemin="0" aria-valuenow="5" role="progressbar"
+                                class="progress-bar bg-primary">
+                                <span class="sr-only">80% Complete (danger)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rating-list-right text-black">02%</div>
+                </div>
+            </div>
+            <div class="graph-star-rating-footer text-center mt-3 mb-3"> <button type="button"
+                    class="btn btn-outline-primary btn-sm">Rate and Review</button></div>
+        </div>
+        </div>
+
+
+    </div>
 
     <!-- EXERCISE 5
             Worst album list! Choose the albums you dislike or some you think are overrated and list it
             in this "hall of shame" chart! 
         -->
+
+    <div class="container">
+        <h2>Worst rated Albums</h2>
+        <div class="row">
+            <div class="row ">
+
+            
+                <div class="card col-sm-6 col-md-4 col-xxl-3" >
+                    <img src="./album.jpg" class="card-img-top" alt="./pic.jpg">
+                    <div class="card-body">
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div>
+                  
+                  <div class="card col-sm-6 col-md-4 col-xxl-3" >
+                    <img src="./album.jpg" class="card-img-top" alt="./pic.jpg">
+                    <div class="card-body">
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div>
+                  <div class="card col-sm-6 col-md-4 col-xxl-3" >
+                    <img src="./album.jpg" class="card-img-top" alt="./pic.jpg">
+                    <div class="card-body">
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div>
+                  <div class="card col-sm-6 col-md-4 col-xxl-3" >
+                    <img src="./album.jpg" class="card-img-top" alt="./pic.jpg">
+                    <div class="card-body">
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div>
+                  
+            </div>
+
+        </div>
+    </div>
 
     <!-- EXERCISE 6
             Do you have any musician / band you admire or you are a fan of?
@@ -94,6 +285,23 @@ HINT: Manage your time in order to finish the structure and responsiveness befor
             Implement a footer with some information / social links.
         -->
 
+        <div class="container" id="Footer">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+              <div class="col-md-4 d-flex align-items-center">
+                <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                  <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+                </a>
+                <span class="text-muted">© 2021 Company, Inc</span>
+              </div>
+          
+              <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg>Instagram</a></li>
+                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg>Facebook</a></li>
+                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg>ETC</a></li>
+              </ul>
+            </footer>
+          </div>
+
     <!-- ############ EXTRA:
         EXERCISE 9
             Create an album details area which will be toggled on and off by clicking on the album image.
@@ -108,6 +316,13 @@ HINT: Manage your time in order to finish the structure and responsiveness befor
          EXERCISE 11
             Add in the footer a field that counts, on page load, how many ALBUMS are present on the page.
         -->
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
