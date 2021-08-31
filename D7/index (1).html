@@ -60,10 +60,12 @@
     </style>
         <style>
           /*
-                EX5) Write a selector to target the "even" links in the navbar
 
             */
-    
+            .nav-scroller .nav a:nth-of-type(even){
+              color: blue !important;
+            }
+
             .nav > *{
               color:red !important;
             }
@@ -96,9 +98,7 @@
             footer{
               background-color: blue;
             }
-            .jumbotron{
-              background-color: coral ;
-            }
+           
              </style>
     <link
       href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900"
@@ -404,10 +404,9 @@
           <!-- /.blog-post -->
 
           <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="#">Older</a>
-            <a
-              class="btn btn-outline-secondary disabled"
-              href="#"
+            <a class="btn btn-outline-primary" onclick="removeLast()">Older</a>
+            <a onclick="newer()"
+              class="btn btn-outline-secondary "
               tabindex="-1"
               aria-disabled="true"
               >Newer</a
@@ -476,8 +475,8 @@
         EX13) Write a function to change the background of the jumbotron
          
 
-        EX15) Write a function to change the column size for heading in jumbotron
         EX16) Write a function to remove the "Search" magnifying glass icon
+
         EX17) Write a function to trim just the first 50 characters in the first paragraph for each blog post
         EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title)
         EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
@@ -497,7 +496,7 @@ function changeH1Color(){
 }
 
 function changeJumbotron(){
-  let jumbotron = document.getElementsByClassName('.jumbotron')
+  let jumbotron = document.querySelectorAll('.jumbotron')
   jumbotron.style.backgroundColor = 'coral !important'
 }
 
@@ -516,6 +515,42 @@ function cahngeColumn(){
 
 }
 
+
+
+/*
+         EX17) Write a function to trim just the first 50 characters in the first paragraph for each blog post
+        EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
+    */
+
+    function removeIcon(){
+      let iconNode = document.querySelectorAll('a[href*="#"] > svg')
+      iconNode[0].remove()
+    }
+// EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title)
+
+    function  newer(){
+      let blogNode = document.createElement('div')
+      blogNode.classList.add('blog-post')
+      
+      let titleNode = document.createElement('h2')
+      titleNode.classList.add('blog-post-title')
+      titleNode.innerHTML='New post'
+      blogNode.appendChild(titleNode)
+
+      let bodynode = document.querySelectorAll('.blog-post:last-of-type')[0]
+      bodynode.appendChild(blogNode)
+
+      return blogNode
+
+    }
+
+//EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
+function removeLast(){
+  let lastBlogNode = document.querySelectorAll('.blog-post:last-of-type')[0]
+  lastBlogNode.remove()
+}
+
+// EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
 
 
 
