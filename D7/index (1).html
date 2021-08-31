@@ -62,7 +62,6 @@
           /*
                 EX5) Write a selector to target the "even" links in the navbar
 
-                EX10) Write a selector to target the footer
             */
     
             .nav > *{
@@ -96,6 +95,9 @@
             }
             footer{
               background-color: blue;
+            }
+            .jumbotron{
+              background-color: coral ;
             }
              </style>
     <link
@@ -473,7 +475,7 @@
         JS Exercises
         EX13) Write a function to change the background of the jumbotron
          
-        EX14) Write a function to remove all the links under "Elsewhere"
+
         EX15) Write a function to change the column size for heading in jumbotron
         EX16) Write a function to remove the "Search" magnifying glass icon
         EX17) Write a function to trim just the first 50 characters in the first paragraph for each blog post
@@ -495,9 +497,26 @@ function changeH1Color(){
 }
 
 function changeJumbotron(){
-  const jumbotron = document.getElementsByClassName('jumbotron')
-  jumbotron[0].style.backgroundColor = 'green'
+  let jumbotron = document.getElementsByClassName('.jumbotron')
+  jumbotron.style.backgroundColor = 'coral !important'
 }
+
+function removeLinks() {
+      let removedNode = document.querySelectorAll(".blog-sidebar div:nth-child(3) > ol ")
+      
+      for(let i of removedNode){
+        removedNode[0].remove()
+      }
+
+    }
+
+function cahngeColumn(){
+  let headingNode = document.querySelectorAll('.jumbotron:nth-child(1)')[0]
+  headingNode.classList.add('col-12')
+
+}
+
+
 
 
 
