@@ -48,23 +48,48 @@ function sortingParticipants(_numberOfTeams){
         }
             
         
-    
+        addingToList()
          
 }
 
 
 function checkingParticipants(_participant){
     let participantsNode=document.querySelectorAll('.participant')
+    let teamsNumber=document.getElementsByTagName('ul').length
     for(let i=0; i<participantsNode.length;i++){
 
 
         if(participantsNode[_participant].innerHTML!==participantsNode[i].innerHTML){
             
             console.log(participantsNode[_participant].innerHTML)
+            //addingToList(_participant,teamsNumber )
+
 
         }else{
         }
 
     }
+
+}
+
+
+function addingToList(_participant, _numberOfTeams){
+    let participantsNode=document.querySelectorAll('.participant')
+    let array = []
+    console.log()
+    for(let i =0; i<_numberOfTeams;i++){
+        
+        let team = []
+        array.push(team)
+
+        for(let v; v<_numberOfTeams;v++){
+            team.push(participantsNode[v])
+            console.log(team)
+            
+        }
+
+    }
+    
+
 
 }
