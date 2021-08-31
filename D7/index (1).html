@@ -15,20 +15,7 @@
     -->
 
   <head>
-    <style>
-      /*
-            EX1) Write a selector to target the h1 in jumbotron
-            EX2) Write a selector to target every children of the navbar
-            EX3) Write a selector to target the "continue reading..." inside the jumbotron
-            EX4) Write a selector to target the first blogpost
-            EX5) Write a selector to target the "even" links in the navbar
-            EX6) Write a selector to target the last blog post
-            EX7) Write a selector to target all the li into the first ordered-list in the sidebar ( Archives )
-            EX8) Write a selector to target the second post author
-            EX9) Write a selector to target the "back to top" link     #### EXTRA Try doing it without targeting the footer element directly
-            EX10) Write a selector to target the footer
-        */
-    </style>
+
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -71,6 +58,46 @@
         }
       }
     </style>
+        <style>
+          /*
+                EX5) Write a selector to target the "even" links in the navbar
+
+                EX10) Write a selector to target the footer
+            */
+    
+            .nav > *{
+              color:red !important;
+            }
+            .jumbotron > div > h1{
+              color: black !important;
+            }
+            .jumbotron > div > p > a{
+              color: black !important;
+            }
+            .blog-post:last-of-type{
+              color: goldenrod;
+            }
+            .blog-post:first-of-type{
+              color: goldenrod;
+            }
+            h4+ol > li{
+              background-color:black;
+            }
+
+            .blog-post:nth-of-type(2)>p:first-of-type>a{
+              background-color: black;
+            }
+
+            body:nth-child(3){
+              background-color: black;
+            }
+            p>a[href*="#"]:last-of-type{
+              color: red;
+            }
+            footer{
+              background-color: blue;
+            }
+             </style>
     <link
       href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900"
       rel="stylesheet"
@@ -444,9 +471,8 @@
     <script>
       /*
         JS Exercises
-        EX11) Write a function to add a new link into the navbar
-        EX12) Write a function to change the color of the main title
         EX13) Write a function to change the background of the jumbotron
+         
         EX14) Write a function to remove all the links under "Elsewhere"
         EX15) Write a function to change the column size for heading in jumbotron
         EX16) Write a function to remove the "Search" magnifying glass icon
@@ -455,6 +481,26 @@
         EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
         EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
     */
-    </script>
+function createNavLink(){
+  const navNode = document.querySelectorAll('nav.d-flex')
+  const newLink = document.createElement('a')
+  newLink.innerHTML="asdads"
+  navNode[0].appendChild(newLink)
+
+}   
+function changeH1Color(){
+  const h1 = document.getElementsByTagName('h1')
+  h1[0].innerHTML='changed'
+
+}
+
+function changeJumbotron(){
+  const jumbotron = document.getElementsByClassName('jumbotron')
+  jumbotron[0].style.backgroundColor = 'green'
+}
+
+
+
+</script>
   </body>
 </html>
