@@ -19,6 +19,25 @@
     .h-25{
             height: 33.33% !important;
         }
+
+        .border-for-first-col {
+            border: 2px solid black;
+            border-top-left-radius: 50px;
+            border-bottom-left-radius: 50px;
+            /* boder */
+        }
+
+        .middle-border {
+            border-top: 2px solid black;
+            border-bottom: 2px solid black;
+        }
+
+        .bottom-border {
+            border: 2px solid black;
+            border-left: none;
+            border-top-right-radius: 50px;
+            border-bottom-right-radius: 50px;
+        }
   </style>
 </head>
 
@@ -40,8 +59,8 @@
     <div class="container">
       <h1>Exercise 1 </h1>
       <div class="container  mt-5">
-        <div class="row border border-dark rounded" style="height: 400px">
-          <div class="col-6 bg-success border-right border-dark text-white  ">
+        <div class="row  " style="height: 400px">
+          <div class="col-6 bg-success border-for-first-col text-white  ">
                <div class="row h-100">
                       <div class="col my-auto ">
                           <div class="text-center">
@@ -51,14 +70,14 @@
               </div>
               
           </div>
-          <div class="col-2 bg-primary text-white">
+          <div class="col-2  middle-border bg-primary text-white">
             <div class="row h-100">
                 <div class="col mt-auto text-center">
                 <h5>hello</h5>  
                 </div>
             </div>
           </div>
-          <div class="col-4 bg-info text-dark">
+          <div class="col-4 bg-info bottom-border text-dark">
               <div class="row h-25" style="background-color: #FFF7BD;">
                   <div class="col  my-auto text-center">
                       <h5>create three row in this div 1</h5>
