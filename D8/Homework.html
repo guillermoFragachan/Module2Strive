@@ -21,22 +21,26 @@
         }
 
         .border-for-first-col {
-            border: 2px solid black;
+            border: 3px solid black;
             border-top-left-radius: 50px;
             border-bottom-left-radius: 50px;
             /* boder */
         }
 
         .middle-border {
-            border-top: 2px solid black;
-            border-bottom: 2px solid black;
+            border-top: 3px solid black;
+            border-bottom: 3px solid black;
         }
 
         .bottom-border {
-            border: 2px solid black;
+            border: 3px solid black;
             border-left: none;
-            border-top-right-radius: 50px;
-            border-bottom-right-radius: 50px;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            border-color: black;
+        }
+        body{
+            overflow-x: hidden;
         }
   </style>
 </head>
@@ -77,8 +81,9 @@
                 </div>
             </div>
           </div>
+
           <div class="col-4 bg-info bottom-border text-dark">
-              <div class="row h-25" style="background-color: #FFF7BD;">
+              <div class="row h-25 " style="background-color: #FFF7BD;">
                   <div class="col  my-auto text-center">
                       <h5>create three row in this div 1</h5>
                   </div>
@@ -94,6 +99,7 @@
                   </div>
                 </div>  
           </div>
+          
         </div>
       </div>
     </div>
