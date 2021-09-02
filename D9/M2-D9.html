@@ -76,14 +76,79 @@ Make sure you check the documentation before creting anything custom.
     -->
 
 
+<style>
+    .bTrack {
+  background-color: #0f171e;
+  box-shadow: 0;
+  animation: fade-in 2s 1s forwards;
 
+
+}
+.bTrack:hover{
+    box-shadow:5px 10px 18px black;;
+}
+
+</style>
 
     <!-- EXERCISE 6
         Add an "Add Track" button under the tracklist of the album. 
         It should have a nice shadow transition when its hovered (with the box-shadow property) 
         to look like as if the button was elevating itself.
     -->
-    <button type="button" class="btn btn-secondary">Add track</button>
+    <button type="button" class="btn bTrack btn-secondary">Add track</button>
+
+
+    <button type="button" class="btn bTrack btn-secondary" data-toggle="modal" data-target="#staticBackdrop">
+        Add track
+      </button>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text" id="inputGroup-sizing-sm">Track Title</span>
+                            </div>
+                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                          </div>
+                    </div>
+                </div>
+              <div class="row">
+                  <div class="col-6">
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="inputGroup-sizing-sm">Track number</span>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                      </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="inputGroup-sizing-sm">Track duration</span>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Understood</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
     <!-- EXERCISE 7
