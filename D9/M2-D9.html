@@ -18,10 +18,16 @@ Make sure you check the documentation before creting anything custom.
 <html>
 
 <head>
-    <!-- IMPORT ALL THE BOOSTRAP RELATED CSS & SCRIPTS-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+
+    <!-- IMPORT ALL THE BOOSTRAP RELATED CSS & SCRIPTS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <style>
-        /* PREVIOUS CODE */
+    
+        
     </style>
 </head>
 
@@ -32,14 +38,21 @@ Make sure you check the documentation before creting anything custom.
         Make it appear with a fade-in animation effect when the page loads.
     -->
 
+
     <!-- EXERCISE 2
         Use a Bootstrap Card to contain every album in the favorite list you previously created.
         Use the elements of a card bootstrap provides you with to display nicely the album informations such as: album title, artist, year, etc..
     -->
 
+    
+
     <!-- EXERCISE 3
         Foreach album in the favorite list, place a badge on the top-left corner of the album with the genre of the music
     -->
+
+
+
+
 
     <!-- EXERCISE 4
         Create a new section with an album tracklist inside a Bootstrap table.
@@ -47,7 +60,11 @@ Make sure you check the documentation before creting anything custom.
 
         There should be a column for the track order number, one for the title and one for the track duration.
         (If you want, you can also add extra columns)
+        //table-striped
     -->
+
+ 
+
 
     <!-- EXERCISE 5
         Add a DELETE bootstrap button at the end of each row of the tracklist. 
@@ -58,11 +75,16 @@ Make sure you check the documentation before creting anything custom.
         Animate it with a fade-in effect upon the user hovering and fade-out when he/she goes away from it.
     -->
 
+
+
+
     <!-- EXERCISE 6
         Add an "Add Track" button under the tracklist of the album. 
         It should have a nice shadow transition when its hovered (with the box-shadow property) 
         to look like as if the button was elevating itself.
     -->
+    <button type="button" class="btn btn-secondary">Add track</button>
+
 
     <!-- EXERCISE 7
         On the click of "Add Track" button, a modal should appear.
@@ -103,6 +125,13 @@ Make sure you check the documentation before creting anything custom.
         Considering the button you've created in ex. 5 that deletes the row:
         Add a fade-out effect to the row before it gets removed, using a CSS transition effect
     -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
