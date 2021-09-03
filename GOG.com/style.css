@@ -65,10 +65,35 @@ p > a{
     font-weight: 700;
 }
 
+.fonticon{
+    font-size: 3rem;
+    color:#7B1FA2 ;
+    font-weight: 700;
+    
+}
+
 .textG{
     
         position: absolute;
         margin: auto;
         margin-bottom: 0;
     
+}
+
+li:nth-child(1) > a{
+    color:#7B1FA2 ;
+    font-weight: 700;
+}
+li>a{
+    font-weight: 700;
+    color: grey;
+}
+.special-item{
+    height: 35rem;
+    background-color: darkkhaki;
+    border-radius: 20px;
+    background-image: url("./gog-assets/carousel3.jpg");
+    box-shadow: 2px 2px 5px grey;
+
+
 }

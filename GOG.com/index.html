@@ -13,7 +13,8 @@
     
     <nav class="navbar navbar-expand-lg navbar-dark navigation">
             
-        <img style= 'width: 60px; margin-right: 2rem;'src="/gog-assets/GOG.com_logo.svg" alt="">
+       <div class="container">
+        <img style= 'width: 60px; margin-right: 2rem;'src="/gog-assets/logo.png" alt="">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -52,6 +53,7 @@
             <i class="bi bi-search"></i>    
 
         </div>
+       </div>
       </nav>
 
 
@@ -69,12 +71,14 @@
     -->
     <div class="container">
         <div class="row">
-            <h4 class="ml-0">Highlights</h4>
+            <h4 class="ml-0"> <i class="bi bi-brush-fill"></i>Highlights</h4>
         </div>
     </div>
+
+    <hr>
+
     <div class="container">
         
-        <hr>
         <div class="row justify-content-center mb-5 ">
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
@@ -155,15 +159,22 @@
             <div class="col-8">
                 <p>We are GOG.COM, the <a href="">DRM-free</a> home for a <a href="">curated selection</a> of agames. This place was <a href="">made for gamer </a>, so make yourself at home. </p>
             </div>
-            <div class="col-4">
-                <img src="" alt="">
-                <p class="textG"><a href="">The new GOG GALAXY 2.0</a></p>
-            </div>
+            <div class="col-4 ">
+              <div class="row">
+                <div class="col-3 fonticon my-auto mr-0 pr-0">
+                  <i class="bi bi-circle"></i>
+                </div>
+                <div class="col-7 mt-4 ml-0 pl-0">
+                  <p class="  textG"><a href="">The new GOG GALAXY 2.0</a></p>
+
+                </div>
+              </div>
+              </div>
         </div>
         <hr>
         <div class="row mt-5">
-            <div class="col-3">
-                <h4>Recommended for you</h4>
+            <div class="col-12">
+                <h4><i class="bi bi-award-fill"></i>Recommended for you</h4>
             </div>
         </div>
         <hr>
@@ -177,6 +188,10 @@
                         <div class="card-body">
                           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         </div>
+                        <div class="bcard d-flex ">
+                          <i class="mr-auto ml-2 bi bi-cpu-fill"></i>
+                          <p class="pr-2 price">$19.99</p>
+                        </div>
                       </div>
                 </div>
                 <div class="col-4">
@@ -185,6 +200,10 @@
                         <div class="card-body">
                           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         </div>
+                        <div class="bcard d-flex ">
+                          <i class="mr-auto ml-2 bi bi-cpu-fill"></i>
+                          <p class="pr-2 price">$19.99</p>
+                        </div>
                       </div>
                 </div>
                 <div class="col-4">
@@ -192,6 +211,10 @@
                         <img class="card-img-top img-fluid" src="./gog-assets/tile (17).jpg" alt="Card image cap">
                         <div class="card-body">
                           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <div class="bcard d-flex ">
+                          <i class="mr-auto ml-2 bi bi-cpu-fill"></i>
+                          <p class="pr-2 price">$19.99</p>
                         </div>
                       </div>
                 </div>
@@ -207,6 +230,10 @@
                         <div class="card-body">
                           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         </div>
+                        <div class="bcard d-flex ">
+                          <i class="mr-auto ml-2 bi bi-cpu-fill"></i>
+                          <p class="pr-2 price">$19.99</p>
+                        </div>
                       </div>
                 </div>
                 <div class="col-4">
@@ -215,6 +242,10 @@
                         <div class="card-body">
                           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         </div>
+                        <div class="bcard d-flex ">
+                          <i class="mr-auto ml-2 bi bi-cpu-fill"></i>
+                          <p class="pr-2 price">$19.99</p>
+                        </div>
                       </div>
                 </div>
                 <div class="col-4">
@@ -222,6 +253,10 @@
                         <img class="card-img-top img-fluid" src="./gog-assets/tile (16).jpg" alt="Card image cap">
                         <div class="card-body">
                           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <div class="bcard d-flex ">
+                          <i class="mr-auto ml-2 bi bi-cpu-fill"></i>
+                          <p class="pr-2 price">$19.99</p>
                         </div>
                       </div>
                 </div>
@@ -247,9 +282,9 @@
             <div class="col-9 pr-0">
                 <nav aria-label="breadcrumb ">
                     <ol class="breadcrumb">
-                      <li class="breadcrumb-item"><a href="#">Home</a></li>
-                      <li class="breadcrumb-item"><a href="#">Library</a></li>
-                      <li class="breadcrumb-item active" aria-current="page">Data</li>
+                      <li class="breadcrumb-item active " aria-current="page"><a href="#">Featured Deals</a></li>
+                      <li class="breadcrumb-item"><a href="#">Weekly Sale</a></li>
+                      <li class="breadcrumb-item " ><a href="">Timeless classics</a></li>
                     </ol>
                   </nav>
             </div>
@@ -257,23 +292,19 @@
     </div>
     <hr class="mt-0">
  <!---now on sale-->
-    <div class="container">
-      <div class="row">
-        <div class="col-6">
-         <div class="row">
-           <div class="col-6">
-            <div class="card  " >
-              <img class="card-img-top img-fluid" src="./gog-assets/tile (16).jpg" alt="Card image cap">
+    <div class="container ">
+      <div class="row ">
+        <div class="col-6 ">
+         <div class="row ">
+           <div class="col-6 ">
+            <div class="special-item  " >
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               </div>
            </div>
          </div>
          <div class="col-6 ">
-          <div class="card  " >
-            <img class="card-img-top img-fluid" src="./gog-assets/tile (16).jpg" alt="Card image cap">
+          <div class="special-item  " >
             <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             </div>
          </div>
        </div>
