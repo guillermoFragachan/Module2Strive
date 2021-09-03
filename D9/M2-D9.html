@@ -91,18 +91,21 @@
               </div>
               <div class="card col-sm-6 col-md-4 col-xxl-3" >
                 <img src="./pic.jpg" class="card-img-top" alt="./pic.jpg">
+                <div class="badge-genre"> music genre </div>
                 <div class="card-body">
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 </div>
               </div>
               <div class="card col-sm-6 col-md-4 col-xxl-3" >
                 <img src="./pic.jpg" class="card-img-top" alt="./pic.jpg">
+                <div class="badge-genre"> music genre </div>
                 <div class="card-body">
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 </div>
               </div>
               <div class="card col-sm-6 col-md-4 col-xxl-3" >
                 <img src="./pic.jpg" class="card-img-top" alt="./pic.jpg">
+                <div class="badge-genre"> music genre </div>
                 <div class="card-body">
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 </div>
@@ -114,29 +117,32 @@
             
             <div class="card col-sm-6 col-md-4 col-xxl-3" >
                 <img src="./pic.jpg" class="card-img-top" alt="./pic.jpg">
+                <div class="badge-genre"> music genre </div>
                 <div class="card-body">
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 </div>
               </div>
               <div class="card col-sm-6 col-md-4 col-xxl-3" >
                 <img src="./pic.jpg" class="card-img-top" alt="./pic.jpg">
+                <div class="badge-genre"> music genre </div>
                 <div class="card-body">
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 </div>
               </div>
               <div class="card col-sm-6 col-md-4 col-xxl-3" >
                 <img src="./pic.jpg" class="card-img-top" alt="./pic.jpg">
+                <div class="badge-genre"> music genre </div>
                 <div class="card-body">
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 </div>
               </div>
               <div class="card col-sm-6 col-md-4 col-xxl-3" >
                 <img src="./pic.jpg" class="card-img-top" alt="./pic.jpg">
+                <div class="badge-genre"> music genre </div>
                 <div class="card-body">
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 </div>
               </div>
-              <button type="button" class="btn remove btn-primary">delete row</button>
 
         </div>
     </div>
@@ -215,7 +221,7 @@
             <div class="graph-star-rating-footer text-center mt-3 mb-3"> <button type="button"
                     class="btn btn-outline-primary btn-sm">Rate and Review</button></div>
         </div>
-        <button type="button" class="btn remove btn-primary">delete row</button>
+        
 
         </div>
 
@@ -314,21 +320,29 @@
                 <table class="table table-bordered table-striped">
                     <thead>
                       <tr>
+                        <th>Delete</th>
                         <th>Songs</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
                         <td>Song number 1</td>
+                        <td><button type="button" class="btn remove btn-primary">delete row</button></td>
                       </tr>
                       <tr>
                         <td>Song number 2</td>
+                        <td><button type="button" class="btn remove btn-primary">delete row</button></td>
+
                       </tr>
                       <tr>
                         <td>Song number 3</td>
+                        <td><button type="button" class="btn remove btn-primary">delete row</button></td>
+
                       </tr>
                       <tr>
                         <td>Song number 4</td>
+                        <td><button type="button" class="btn remove btn-primary">delete row</button></td>
+
                       </tr>
                     </tbody>
                   </table>
@@ -400,7 +414,7 @@
           }
           Array.from(removeButtons).forEach((removeButton) => {
             removeButton.addEventListener('click', () => {
-              removeButton.parentNode.remove()
+              removeButton.parentNode.parentNode.remove()
             })
           })
         </script>
