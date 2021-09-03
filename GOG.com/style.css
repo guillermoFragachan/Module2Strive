@@ -92,8 +92,23 @@ li>a{
     height: 35rem;
     background-color: darkkhaki;
     border-radius: 20px;
+    background-color: black;
     background-image: url("./gog-assets/carousel3.jpg");
+    opacity: 1;
     box-shadow: 2px 2px 5px grey;
+    
 
+}
+h5{
+    color: #FBC02D;
+    font-weight: 800;
+    font-size: 3rem;
+    margin-top: 10rem;
+}
 
+.footerclass{
+    background-color: #2C2C2C ;
+    background-color: #2C2C2C;
+    font-weight: 600;
+    color: white;
 }
