@@ -1,4 +1,10 @@
 .navigation{
     background-color: #2C2C2C;
     font-weight: 600;
+    color: white;
+    box-shadow: 2px 2px 2px #888888;
+}
+.icons > i{
+font-size: 20px;
+margin-right: 2rem;
 }
