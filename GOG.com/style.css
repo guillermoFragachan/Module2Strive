@@ -1,3 +1,6 @@
+body{
+    background-color: #D8D8D8;
+}
 .navigation{
     background-color: #2C2C2C;
     font-weight: 600;
@@ -7,4 +10,65 @@
 .icons > i{
 font-size: 20px;
 margin-right: 2rem;
+}
+
+hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+  }
+
+  .breadcrumb{
+      background-color: #D8D8D8;
+  }
+
+  h4{
+      display: flex;
+    align-items: baseline;     
+    padding: 0.5rem;
+    margin-bottom: 0;
+
+}
+.card{
+    box-shadow: 2px 2px 5px grey;
+
+}
+.bcard{
+ font-size: x-large;
+ 
+
+}
+.bi-cpu-fill{
+    color: #757575;
+}
+
+.discount {
+    width: 30%;
+    background-color: #7B1FA2;
+    color: white;
+    border-radius: 10%;
+    font-weight: 600;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+}
+.price{
+    font-weight: 500;
+
+}
+
+p > a{
+    color:#7B1FA2 ;
+    font-weight: 700;
+}
+
+.textG{
+    
+        position: absolute;
+        margin: auto;
+        margin-bottom: 0;
+    
 }
