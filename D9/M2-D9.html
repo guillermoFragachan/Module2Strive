@@ -1,83 +1,42 @@
 <!DOCTYPE html>
-<!--
-IMPORTANT:
-Start from the previous Musical assignment project you've created on M2-D2
-    
-ASSIGNMENT RULES
-- The project must be pushed to a new repository and linked in EduFlow by the end of the day.
-- You can google / use StackOverflow BUT we suggest you to use just the material provided and documentation.
-- To test the page, open it with your browser and inspect it with developer tools / device emulator.
-- Use Bootstrap4.6 classes to create the page.
-- Use containers, rows and cols in order to achieve a great responsive layout.
 
-NOTE:
-Most of the requirements in this exercises reference a bootstrap's functionality or component. 
-Make sure you check the documentation before creting anything custom.
--->
 
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- IMPORT ALL THE BOOTSTRAP RELATED CSS & SCRIPTS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
-
-    <!-- IMPORT ALL THE BOOSTRAP RELATED CSS & SCRIPTS-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <style>
-    
-        
-    </style>
-</head>
+      .jumbotron {
+            background-image: url("./assets//jumbotron-bg.png");
+            background-size: 100%;
+            height: auto;
+          
+            
+            
+        }
+        .fade-in-jumbo {
+           opacity: 0;
+           animation: fadein 2s forwards;
+         }
+         @keyframes fadein {
+           from { opacity: 0; }
+           to { opacity: 1; }
+         }
+         .badge-genre{
+          position: absolute;
+          top: 0;
+          color: black;
+          background-color: cadetblue;
+          border-radius: 20%;
+          font-weight: 600;
+          left: 0;
+         }
 
-<body>
-
-    <!-- EXERCISE 1
-        Create a Jumbotron section with a quick explanation / image of the website.
-        Make it appear with a fade-in animation effect when the page loads.
-    -->
-
-
-    <!-- EXERCISE 2
-        Use a Bootstrap Card to contain every album in the favorite list you previously created.
-        Use the elements of a card bootstrap provides you with to display nicely the album informations such as: album title, artist, year, etc..
-    -->
-
-    
-
-    <!-- EXERCISE 3
-        Foreach album in the favorite list, place a badge on the top-left corner of the album with the genre of the music
-    -->
-
-
-
-
-
-    <!-- EXERCISE 4
-        Create a new section with an album tracklist inside a Bootstrap table.
-        The row colors of the table must be alternated.
-
-        There should be a column for the track order number, one for the title and one for the track duration.
-        (If you want, you can also add extra columns)
-        //table-striped
-    -->
-
- 
-
-
-    <!-- EXERCISE 5
-        Add a DELETE bootstrap button at the end of each row of the tracklist. 
-        Attach the functionality to remove its row when it gets clicked. (Requires DOM manipulation)  
-
-        ## EXTRA CSS CHALLENGE ##
-        Make only one button visible at a time, for each row, when the single row gets hovered. 
-        Animate it with a fade-in effect upon the user hovering and fade-out when he/she goes away from it.
-    -->
-
-
-<style>
-    .bTrack {
+         .bTrack {
   background-color: #0f171e;
   box-shadow: 0;
   animation: fade-in 2s 1s forwards;
@@ -87,116 +46,366 @@ Make sure you check the documentation before creting anything custom.
 .bTrack:hover{
     box-shadow:5px 10px 18px black;;
 }
+         
+    </style>
+</head>
 
-</style>
+<body>
+  
 
-    <!-- EXERCISE 6
-        Add an "Add Track" button under the tracklist of the album. 
-        It should have a nice shadow transition when its hovered (with the box-shadow property) 
-        to look like as if the button was elevating itself.
-    -->
-    <button type="button" class="btn bTrack btn-secondary">Add track</button>
+        <nav class=" navbar navbar-light bg-dark ">
+            <header class="d-flex justify-content-center py-3">
+              <ul class="nav nav-pills">
+                <li class="nav-item"><a href="#albums" class="nav-link active" aria-current="page">Albums</a></li>
+                <li class="nav-item"><a href="#reviews" class="nav-link">Reviews</a></li>
+                <li class="nav-item"><a href="#worst" class="nav-link">Worst Albums</a></li>
+                <li class="nav-item"><a href="#Footer" class="nav-link">Footer</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+              </ul>
+            </header>
+        </nav>
+ 
+        <br>
+        <div class="jumbotron fade-in-jumbo ">
+          <h1 class="display-4 fade-in">Hello, world!</h1>
+          <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
+              featured content or information.</p>
+          <hr class="my-4">
+          <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+          <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+      </div>
 
+<br class="pb-5">
+    <div class="container pt-5 " id="albums">
+        <div class="row ">
 
-    <button type="button" class="btn bTrack btn-secondary" data-toggle="modal" data-target="#staticBackdrop">
-        Add track
-      </button>
-      
-      <!-- Modal -->
-      <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="input-group input-group-sm mb-3">
-                            <div class="input-group-prepend">
-                              <span class="input-group-text" id="inputGroup-sizing-sm">Track Title</span>
-                            </div>
-                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-                          </div>
-                    </div>
+            
+            <div class="card col-sm-6 col-md-4 col-xxl-3" >
+                <img src="./pic.jpg" class="card-img-top" alt="./pic.jpg">
+                <div class="badge-genre"> music genre </div>
+                <div class="card-body">
+                  
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  
                 </div>
-              <div class="row">
-                  <div class="col-6">
-                    <div class="input-group input-group-sm mb-3">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text" id="inputGroup-sizing-sm">Track number</span>
-                        </div>
-                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-                      </div>
-                  </div>
-                  <div class="col-6">
-                    <div class="input-group input-group-sm mb-3">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text" id="inputGroup-sizing-sm">Track duration</span>
-                        </div>
-                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-                      </div>
-                  </div>
               </div>
+              <div class="card col-sm-6 col-md-4 col-xxl-3" >
+                <img src="./pic.jpg" class="card-img-top" alt="./pic.jpg">
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+              <div class="card col-sm-6 col-md-4 col-xxl-3" >
+                <img src="./pic.jpg" class="card-img-top" alt="./pic.jpg">
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+              <div class="card col-sm-6 col-md-4 col-xxl-3" >
+                <img src="./pic.jpg" class="card-img-top" alt="./pic.jpg">
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+              
+        </div>
+        <div class="row ">
+
+            
+            <div class="card col-sm-6 col-md-4 col-xxl-3" >
+                <img src="./pic.jpg" class="card-img-top" alt="./pic.jpg">
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+              <div class="card col-sm-6 col-md-4 col-xxl-3" >
+                <img src="./pic.jpg" class="card-img-top" alt="./pic.jpg">
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+              <div class="card col-sm-6 col-md-4 col-xxl-3" >
+                <img src="./pic.jpg" class="card-img-top" alt="./pic.jpg">
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+              <div class="card col-sm-6 col-md-4 col-xxl-3" >
+                <img src="./pic.jpg" class="card-img-top" alt="./pic.jpg">
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+              <button type="button" class="btn remove btn-primary">delete row</button>
+
+        </div>
+    </div>
+
+  
+        <hr>
+        <br>    
+    <div class="container" id='reviews'>
+        <h1>Best Album by reviews</h1>
+        <div class="row">
+        <div class="card col-sm-6 col-md-4 col-xxl-3" >
+                <img src="./pic.jpg" class="card-img-top" alt="./pic.jpg">
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+        </div>
+        <div class="bg-white rounded shadow-sm col-sm-6 col-md-8 col-xxl-8 clearfix graph-star-rating">
+            <h5 class="mb-0 mb-4">Ratings and Reviews</h5>
+            <div class="graph-star-rating-header">
+                <div class="star-rating">
+                    
+                    <b class="text-black ml-2">334</b>
+                </div>
+                <p class="text-black mb-4 mt-2">Rated 3.5 out of 5</p>
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Understood</button>
+            <div class="graph-star-rating-body">
+                <div class="rating-list">
+                    <div class="rating-list-left text-black"> 5 Star</div>
+                    <div class="rating-list-center">
+                        <div class="progress">
+                            <div style="width: 56%" aria-valuemax="5" aria-valuemin="0" aria-valuenow="5" role="progressbar"
+                                class="progress-bar bg-primary">
+                                <span class="sr-only">80% Complete (danger)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rating-list-right text-black">56%</div>
+                </div>
+                <div class="rating-list">
+                    <div class="rating-list-left text-black"> 4 Star</div>
+                    <div class="rating-list-center">
+                        <div class="progress">
+                            <div style="width: 23%" aria-valuemax="5" aria-valuemin="0" aria-valuenow="5" role="progressbar"
+                                class="progress-bar bg-primary">
+                                <span class="sr-only">80% Complete (danger)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rating-list-right text-black">23%</div>
+                </div>
+                <div class="rating-list">
+                    <div class="rating-list-left text-black"> 3 Star</div>
+                    <div class="rating-list-center">
+                        <div class="progress">
+                            <div style="width: 11%" aria-valuemax="5" aria-valuemin="0" aria-valuenow="5" role="progressbar"
+                                class="progress-bar bg-primary">
+                                <span class="sr-only">80% Complete (danger)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rating-list-right text-black">11%</div>
+                </div>
+                <div class="rating-list">
+                    <div class="rating-list-left text-black"> 2 Star</div>
+                    <div class="rating-list-center">
+                        <div class="progress">
+                            <div style="width: 2%" aria-valuemax="5" aria-valuemin="0" aria-valuenow="5" role="progressbar"
+                                class="progress-bar bg-primary">
+                                <span class="sr-only">80% Complete (danger)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rating-list-right text-black">02%</div>
+                </div>
             </div>
-          </div>
+            <div class="graph-star-rating-footer text-center mt-3 mb-3"> <button type="button"
+                    class="btn btn-outline-primary btn-sm">Rate and Review</button></div>
+        </div>
+        <button type="button" class="btn remove btn-primary">delete row</button>
+
+        </div>
+
+
+    </div>
+
+    
+
+    <div class="container">
+        <h2>Worst rated Albums</h2>
+        <div class="row">
+            <div class="row ">
+
+            
+                <div class="card col-sm-6 col-md-4 col-xxl-3" >
+                    <img src="./album.jpg" class="card-img-top" alt="./pic.jpg">
+                    <div class="card-body">
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div>
+                  
+                  <div class="card col-sm-6 col-md-4 col-xxl-3" >
+                    <img src="./album.jpg" class="card-img-top" alt="./pic.jpg">
+                    <div class="card-body">
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div>
+                  <div class="card col-sm-6 col-md-4 col-xxl-3" >
+                    <img src="./album.jpg" class="card-img-top" alt="./pic.jpg">
+                    <div class="card-body">
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div>
+                  <div class="card col-sm-6 col-md-4 col-xxl-3" >
+                    <img src="./album.jpg" class="card-img-top" alt="./pic.jpg">
+                    <div class="card-body">
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div>
+                  
+            </div>
+
+        </div>
+    </div>
+
+  
+        
+    <div class="container">
+        <h2>Extra</h2>
+        <div class="row">
+            <div class="card col-sm-6 col-md-4 col-xxl-3 "  >
+                <img src="./album.jpg" class="card-img-top collapse.show" alt="./pic.jpg" id="toggle">
+                <div class="card-body">
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+                </div>
+              
+                <a class="btn btn-primary" data-toggle="collapse" href="#toggle" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
+
+
+        </div>
+    </div>
+
+
+    <div class="d-flex justify-content-center">
+        <div class="spinner-border" role="status">
+          <span class="sr-only"></span>
         </div>
       </div>
 
+        <div class="container" id="Footer">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+              <div class="col-md-4 d-flex align-items-center">
+                <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                  <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+                </a>
+                <span class="text-muted">© 2021 Company, Inc</span>
+              </div>
+          
+              <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg>Instagram</a></li>
+                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg>Facebook</a></li>
+                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg>ETC</a></li>
+              </ul>
+            </footer>
+          </div>
 
-    <!-- EXERCISE 7
-        On the click of "Add Track" button, a modal should appear.
-        (check in the documentation the modal + button example)
+   
+          <div class="conatiner ">
+     
+     
+            <div class="row justify-content-center">
+               <div class="col-8">
+                <h4>Trackslit</h4>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                      <tr>
+                        <th>Songs</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Song number 1</td>
+                      </tr>
+                      <tr>
+                        <td>Song number 2</td>
+                      </tr>
+                      <tr>
+                        <td>Song number 3</td>
+                      </tr>
+                      <tr>
+                        <td>Song number 4</td>
+                      </tr>
+                    </tbody>
+                  </table>
+               </div>
+               <button type="button" class="btn bTrack btn-secondary" data-toggle="modal" data-target="#staticBackdrop">
+                Add track
+              </button>
+              
+              <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="staticBackdropLabel">Add track</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="input-group input-group-sm mb-3">
+                                    <div class="input-group-prepend">
+                                      <span class="input-group-text" id="inputGroup-sizing-sm">Track Title</span>
+                                    </div>
+                                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                                  </div>
+                            </div>
+                        </div>
+                      <div class="row">
+                          <div class="col-6">
+                            <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text" id="inputGroup-sizing-sm">Track number</span>
+                                </div>
+                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                              </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text" id="inputGroup-sizing-sm">Track duration</span>
+                                </div>
+                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
         
-        The modal shall contain single input fields (avoid using a <form> to wrap the inputs) with:
-        - Track number
-        - Track title
-        - Track duration
 
-        The fields should be inside an Input Group and divided in 2 columns.
-    -->
 
-    <!-- ############### -->
-    <!-- ###  EXTRA  ### -->
-    <!-- ############### -->
+            </div>
+            <hr>
+        
+         </div>
+        
 
-    <!-- EXERCISE 8
-        The modal should contain 2 buttons at the bottom:
-        - Add => Adds a new track in the tracklist with the data of the input fields.
-        - Close => closes the modal
 
-        https://getbootstrap.com/docs/4.6/components/alerts/
-        [EXTRA] Make the message disappear after 5 seconds
-        https://www.w3schools.com/jsref/met_win_settimeout.asp
-    -->
+        <script>
+        let removeButtons = document.getElementsByClassName('remove')
 
-    <!-- EXERCISE 9
-        Alert the user with a success message when the track gets added, or when a track gets deleted.
-     -->
-
-    <!-- EXERCISE 10
-        Considering the "Add Track" functionality that you've created on ex. 8: 
-         - The new list-element added to the list should appear with a fade-in effect
-     -->
-
-    <!-- EXERCISE 11
-        Considering the button you've created in ex. 5 that deletes the row:
-        Add a fade-out effect to the row before it gets removed, using a CSS transition effect
-    -->
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-        crossorigin="anonymous"></script>
+          function name(params) {
+            
+          }
+          Array.from(removeButtons).forEach((removeButton) => {
+            removeButton.addEventListener('click', () => {
+              removeButton.parentNode.remove()
+            })
+          })
+        </script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 </body>
 
 </html>
